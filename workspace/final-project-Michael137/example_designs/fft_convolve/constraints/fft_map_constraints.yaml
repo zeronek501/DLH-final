@@ -1,0 +1,18 @@
+#
+# The following constraints are not limitations of the hardware architecture and dataflow,
+# but help limit the search space to speed up search
+#
+
+mapspace_constraints:
+  targets:
+    - target: DRAM
+      type: temporal
+      permutation: HTCN
+      factors: T=0 H=4
+    - target: shared_glb
+      type: temporal
+      permutation: JS
+    - target: DummyBuffer
+      type: temporal
+      permutation: KYXJS
+      factors: S=1 X=0 Y=0 K=0

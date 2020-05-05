@@ -3,17 +3,17 @@ ERT_summary:
   table_summary:
   - name: system.simple_ws.PE[0..255].mac
     actions:
-    - name: mac_random
-      energy: 2.2
-    - name: mac_reused
-      energy: 1.877
-    - name: mac_gated
-      energy: 0.103
+    - name: fft_random
+      energy: 0.0
+    - name: fft_reused
+      energy: 0.0
+    - name: fft_gated
+      energy: 0.0
     - name: idle
-      energy: 0.066
+      energy: 0.0
     primitive_estimation(s):
     - name: system.simple_ws.PE[0..255].mac
-      estimator: Aladdin_table
+      estimator: table-based-plug-ins
   - name: system.DRAM
     actions:
     - name: read
@@ -28,13 +28,13 @@ ERT_summary:
   - name: system.simple_ws.PE[0..255].pe_spad
     actions:
     - name: write
-      average_energy: 0.824
-      max_energy: 1.586
-      min_energy: 0.061
+      average_energy: 0.752
+      max_energy: 1.448
+      min_energy: 0.055
     - name: read
-      average_energy: 0.824
-      max_energy: 1.586
-      min_energy: 0.061
+      average_energy: 0.752
+      max_energy: 1.448
+      min_energy: 0.055
     - name: idle
       energy: 0.024
     primitive_estimation(s):
@@ -49,21 +49,21 @@ ERT_summary:
   - name: system.simple_ws.PE[0..255].weight_reg
     actions:
     - name: access
-      energy: 0.009
+      energy: 0.0
     primitive_estimation(s):
     - name: storage
       estimator: Aladdin_table
   - name: system.simple_ws.PE[0..255].input_activation_reg
     actions:
     - name: access
-      energy: 0.009
+      energy: 0.0
     primitive_estimation(s):
     - name: storage
       estimator: Aladdin_table
   - name: system.simple_ws.PE[0..255].output_activation_reg
     actions:
     - name: access
-      energy: 0.009
+      energy: 0.0
     primitive_estimation(s):
     - name: storage
       estimator: Aladdin_table

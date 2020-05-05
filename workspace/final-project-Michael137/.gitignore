@@ -1,3 +1,11 @@
 outputs/
 run.py
 scripts/__pycache__
+
+timeloop*.yaml
+ERT*.yaml
+ART*.yaml
+*verbose*.yaml
+*.txt
+*.log
+*.xml

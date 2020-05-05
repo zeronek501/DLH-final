@@ -1,36 +1,23 @@
-[  2] Utilization = 0.13 | pJ/MACC =  135.987
-[  3] Utilization = 0.13 | pJ/MACC =   11.454
-[  3] Utilization = 0.13 | pJ/MACC =   11.089
-[  3] Utilization = 0.25 | pJ/MACC =   35.805
-[  7] Utilization = 0.65 | pJ/MACC =    7.427
-[  6] Utilization = 0.65 | pJ/MACC =   33.989
-[  3] Utilization = 0.49 | pJ/MACC =    9.983
-[  2] Utilization = 0.19 | pJ/MACC =   27.939
-[  3] Utilization = 0.49 | pJ/MACC =    9.500
-[  2] Utilization = 0.39 | pJ/MACC =  138.153
-[  2] Utilization = 0.57 | pJ/MACC =   35.595
-[  3] Utilization = 0.65 | pJ/MACC =    7.467
-[  3] Utilization = 0.65 | pJ/MACC =    6.563
-[  2] Utilization = 0.65 | pJ/MACC =   33.186
-[  7] Utilization = 0.65 | pJ/MACC =    7.165
-[  3] Utilization = 0.79 | pJ/MACC =   10.532
-[  2] Utilization = 0.79 | pJ/MACC =  136.586
-[  6] Utilization = 0.72 | pJ/MACC =   20.799
-[  7] Utilization = 0.72 | pJ/MACC =    7.304
-[  3] Utilization = 0.79 | pJ/MACC =    8.472
-[  6] Utilization = 0.72 | pJ/MACC =   20.006
-[  2] Utilization = 0.79 | pJ/MACC =  135.684
-[  7] Utilization = 0.72 | pJ/MACC =    7.007
-[  7] Utilization = 0.72 | pJ/MACC =    6.821
-[  3] Utilization = 0.79 | pJ/MACC =    8.303
-[  2] Utilization = 0.79 | pJ/MACC =  135.233
-[  7] Utilization = 0.79 | pJ/MACC =    8.218
-[  6] Utilization = 0.79 | pJ/MACC =  135.008
-[  5] STATEMENT: 15000 invalid mappings (15000 fanout, 0 capacity) found since the last valid mapping, terminating search.
-[  0] STATEMENT: 15000 invalid mappings (12697 fanout, 2303 capacity) found since the last valid mapping, terminating search.
-[  4] STATEMENT: 15000 invalid mappings (12882 fanout, 2118 capacity) found since the last valid mapping, terminating search.
-[  1] STATEMENT: 15000 invalid mappings (15000 fanout, 0 capacity) found since the last valid mapping, terminating search.
-[  6] STATEMENT: 3000 suboptimal mappings found since the last upgrade, terminating search.
-[  7] STATEMENT: 3000 suboptimal mappings found since the last upgrade, terminating search.
-[  3] STATEMENT: 3000 suboptimal mappings found since the last upgrade, terminating search.
-[  2] STATEMENT: 3000 suboptimal mappings found since the last upgrade, terminating search.
+[  0] Utilization = 0.01 | pJ/MACC =  513.847
+[  0] Utilization = 0.01 | pJ/MACC =  404.700
+[  5] Utilization = 0.02 | pJ/MACC =  343.181
+[  2] Utilization = 0.01 | pJ/MACC =  513.847
+[  1] Utilization = 0.01 | pJ/MACC =  513.847
+[  5] Utilization = 0.02 | pJ/MACC =  215.336
+[  4] Utilization = 0.01 | pJ/MACC =  513.847
+[  2] Utilization = 0.01 | pJ/MACC =  386.003
+[  1] Utilization = 0.01 | pJ/MACC =  386.003
+[  7] Utilization = 0.01 | pJ/MACC =  513.847
+[  4] Utilization = 0.01 | pJ/MACC =  386.003
+[  7] Utilization = 0.01 | pJ/MACC =  386.003
+[  6] Utilization = 0.01 | pJ/MACC =  513.847
+[  6] Utilization = 0.01 | pJ/MACC =  386.003
+[  7] Utilization = 0.01 | pJ/MACC =  277.237
+[  3] STATEMENT: 15000 invalid mappings (15000 fanout, 0 capacity) found since the last valid mapping, terminating search.
+[  4] STATEMENT: 15000 invalid mappings (0 fanout, 15000 capacity) found since the last valid mapping, terminating search.
+[  0] STATEMENT: 15000 invalid mappings (0 fanout, 15000 capacity) found since the last valid mapping, terminating search.
+[  5] STATEMENT: 15000 invalid mappings (0 fanout, 15000 capacity) found since the last valid mapping, terminating search.
+[  7] STATEMENT: 15000 invalid mappings (0 fanout, 15000 capacity) found since the last valid mapping, terminating search.
+[  2] STATEMENT: 15000 invalid mappings (0 fanout, 15000 capacity) found since the last valid mapping, terminating search.
+[  1] STATEMENT: 15000 invalid mappings (0 fanout, 15000 capacity) found since the last valid mapping, terminating search.
+[  6] STATEMENT: 15000 invalid mappings (0 fanout, 15000 capacity) found since the last valid mapping, terminating search.

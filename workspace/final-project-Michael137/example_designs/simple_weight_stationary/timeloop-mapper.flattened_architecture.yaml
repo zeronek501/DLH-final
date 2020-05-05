@@ -14,7 +14,7 @@ architecture:
       technology: 45nm
       word-bits: 16
   - name: system.simple_ws.PE[0..255].mac
-    class: intmac
+    class: fft_op
     attributes:
       datawidth: 16
       latency: 5ns

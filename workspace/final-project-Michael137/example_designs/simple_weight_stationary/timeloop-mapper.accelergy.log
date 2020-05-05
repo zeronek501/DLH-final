@@ -15,14 +15,17 @@ Warn: Cannot recognize the top key "mapspace_constraints" in file constraints/si
 Warn: Cannot recognize the top key "problem" in file ../../layer_shapes/AlexNet/AlexNet_layer1.yaml 
 Info: config file located: /root/.config/accelergy/accelergy_config.yaml 
 config file content: 
- {'estimator_plug_ins': ['/usr/local/share/accelergy/estimation_plug_ins'], 'primitive_components': ['/usr/local/share/accelergy/primitive_component_libs'], 'table_plug_ins': {'roots': ['/usr/local/share/accelergy/estimation_plug_ins/accelergy-table-based-plug-ins/set_of_table_templates']}, 'version': 0.3}
-Info: primitive component file parsed:  /usr/local/share/accelergy/primitive_component_libs/primitive_component.lib.yaml 
-Info: primitive component file parsed:  /usr/local/share/accelergy/primitive_component_libs/pim_primitive_component.lib.yaml 
-Info: estimator plug-in identified by:  /usr/local/share/accelergy/estimation_plug_ins/accelergy-cacti-plug-in/cacti.estimator.yaml 
-Info: estimator plug-in identified by:  /usr/local/share/accelergy/estimation_plug_ins/dummy_tables/dummy.estimator.yaml 
-Info: estimator plug-in identified by:  /usr/local/share/accelergy/estimation_plug_ins/accelergy-aladdin-plug-in/aladdin.estimator.yaml 
-Info: estimator plug-in identified by:  /usr/local/share/accelergy/estimation_plug_ins/accelergy-table-based-plug-ins/table.estimator.yaml 
+ {'estimator_plug_ins': ['/home/workspace/final-project-Michael137/estimation_plug_ins'], 'primitive_components': ['/home/workspace/final-project-Michael137/primitive_component_libs'], 'table_plug_ins': {'roots': ['/home/workspace/final-project-Michael137/set_of_table_templates/', '/home/workspace/final-project-Michael137/PIM_estimation_tables/', 'set_of_table_templates']}, 'version': 0.3}
+Info: primitive component file parsed:  /home/workspace/final-project-Michael137/primitive_component_libs/pim_primitive_component.lib.yaml 
+Info: primitive component file parsed:  /home/workspace/final-project-Michael137/primitive_component_libs/primitive_component.lib.yaml 
+Info: estimator plug-in identified by:  /home/workspace/final-project-Michael137/estimation_plug_ins/dummy_tables/dummy.estimator.yaml 
+Info: estimator plug-in identified by:  /home/workspace/final-project-Michael137/estimation_plug_ins/accelergy-aladdin-plug-in/aladdin.estimator.yaml 
+Info: estimator plug-in identified by:  /home/workspace/final-project-Michael137/estimation_plug_ins/accelergy-table-based-plug-ins/table.estimator.yaml 
 table-based-plug-ins Identifies a set of tables named:  test_tables
+table-based-plug-ins Identifies a set of tables named:  memristor_tables
+table-based-plug-ins Identifies a set of tables named:  45nm_tables
+table-based-plug-ins Identifies a set of tables named:  32nm_tables
+Info: estimator plug-in identified by:  /home/workspace/final-project-Michael137/estimation_plug_ins/accelergy-cacti-plug-in/cacti.estimator.yaml 
 Info: CACTI plug-in... Querying CACTI for request:
  {'class_name': 'SRAM', 'attributes': OrderedDict([('technology', '45nm'), ('width', 64), ('depth', 16384), ('n_rdwr_ports', 2), ('n_banks', 32), ('n_rd_ports', 0), ('n_wr_ports', 0), ('latency', '5ns')]), 'action_name': 'write', 'arguments': {'data_delta': 0, 'address_delta': 0}}
 Warn: No action counts are specified as yaml input 

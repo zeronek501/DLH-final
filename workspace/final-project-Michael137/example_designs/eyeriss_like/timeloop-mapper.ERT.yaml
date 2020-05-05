@@ -26,7 +26,7 @@ ERT:
       arguments:
         address_delta: 0
         data_delta: 1
-      energy: 0.144
+      energy: 0.0
     - name: read
       arguments:
         address_delta: 1
@@ -36,7 +36,7 @@ ERT:
       arguments:
         address_delta: 1
         data_delta: 1
-      energy: 0.202
+      energy: 0.058
     - name: write
       arguments:
         address_delta: 0
@@ -46,7 +46,7 @@ ERT:
       arguments:
         address_delta: 0
         data_delta: 1
-      energy: 0.144
+      energy: 0.0
     - name: write
       arguments:
         address_delta: 1
@@ -56,7 +56,7 @@ ERT:
       arguments:
         address_delta: 1
         data_delta: 1
-      energy: 0.202
+      energy: 0.058
     - name: idle
       arguments: null
       energy: 0.006
@@ -82,7 +82,7 @@ ERT:
       arguments:
         address_delta: 0
         data_delta: 1
-      energy: 0.193
+      energy: 0.049
     - name: write
       arguments:
         address_delta: 1
@@ -92,7 +92,7 @@ ERT:
       arguments:
         address_delta: 1
         data_delta: 1
-      energy: 0.237
+      energy: 0.093
     - name: read
       arguments:
         address_delta: 0
@@ -102,7 +102,7 @@ ERT:
       arguments:
         address_delta: 0
         data_delta: 1
-      energy: 0.193
+      energy: 0.049
     - name: read
       arguments:
         address_delta: 1
@@ -112,7 +112,7 @@ ERT:
       arguments:
         address_delta: 1
         data_delta: 1
-      energy: 0.237
+      energy: 0.093
     - name: idle
       arguments: null
       energy: 0.018
@@ -127,7 +127,7 @@ ERT:
       arguments:
         address_delta: 0
         data_delta: 1
-      energy: 0.199
+      energy: 0.055
     - name: write
       arguments:
         address_delta: 1
@@ -137,7 +137,7 @@ ERT:
       arguments:
         address_delta: 1
         data_delta: 1
-      energy: 1.586
+      energy: 1.442
     - name: read
       arguments:
         address_delta: 0
@@ -147,7 +147,7 @@ ERT:
       arguments:
         address_delta: 0
         data_delta: 1
-      energy: 0.199
+      energy: 0.055
     - name: read
       arguments:
         address_delta: 1
@@ -157,7 +157,7 @@ ERT:
       arguments:
         address_delta: 1
         data_delta: 1
-      energy: 1.586
+      energy: 1.442
     - name: idle
       arguments: null
       energy: 0.024
@@ -172,7 +172,7 @@ ERT:
       arguments:
         address_delta: 0
         data_delta: 1
-      energy: 0.193
+      energy: 0.049
     - name: write
       arguments:
         address_delta: 1
@@ -182,7 +182,7 @@ ERT:
       arguments:
         address_delta: 1
         data_delta: 1
-      energy: 0.251
+      energy: 0.107
     - name: read
       arguments:
         address_delta: 0
@@ -192,7 +192,7 @@ ERT:
       arguments:
         address_delta: 0
         data_delta: 1
-      energy: 0.193
+      energy: 0.049
     - name: read
       arguments:
         address_delta: 1
@@ -202,7 +202,7 @@ ERT:
       arguments:
         address_delta: 1
         data_delta: 1
-      energy: 0.251
+      energy: 0.107
     - name: idle
       arguments: null
       energy: 0.018

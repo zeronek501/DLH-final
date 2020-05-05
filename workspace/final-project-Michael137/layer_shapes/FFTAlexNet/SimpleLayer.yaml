@@ -1,0 +1,38 @@
+problem:
+  instance:
+    C: 3
+    M: 96
+    N: 1
+    R: 11
+    S: 11
+
+    T: 11
+    Y: 2
+  shape:
+    coefficients:
+    - default: 1
+      name: Y
+    data-spaces:
+    - name: Twiddles
+      projection:
+      - - - N
+    - name: Inputs
+      projection:
+      - - - C
+      - - - M
+      - - - R
+          - Y
+      - - - S
+    - name: Outputs
+      projection:
+      - - - N
+      - - - M
+      read-write: true
+    dimensions:
+    - C
+    - M
+    - T
+    - R
+    - S
+    - N
+    name: CNN-Layer

@@ -3,18 +3,18 @@ ERT:
   tables:
   - name: system.simple_ws.PE[0..255].mac
     actions:
-    - name: mac_random
+    - name: fft_random
       arguments: null
-      energy: 2.2
-    - name: mac_reused
+      energy: 0.0
+    - name: fft_reused
       arguments: null
-      energy: 1.877
-    - name: mac_gated
+      energy: 0.0
+    - name: fft_gated
       arguments: null
-      energy: 0.103
+      energy: 0.0
     - name: idle
       arguments: null
-      energy: 0.066
+      energy: 0.0
   - name: system.DRAM
     actions:
     - name: read
@@ -37,7 +37,7 @@ ERT:
       arguments:
         address_delta: 0
         data_delta: 1
-      energy: 0.199
+      energy: 0.055
     - name: write
       arguments:
         address_delta: 1
@@ -47,7 +47,7 @@ ERT:
       arguments:
         address_delta: 1
         data_delta: 1
-      energy: 1.586
+      energy: 1.442
     - name: read
       arguments:
         address_delta: 0
@@ -57,7 +57,7 @@ ERT:
       arguments:
         address_delta: 0
         data_delta: 1
-      energy: 0.199
+      energy: 0.055
     - name: read
       arguments:
         address_delta: 1
@@ -67,7 +67,7 @@ ERT:
       arguments:
         address_delta: 1
         data_delta: 1
-      energy: 1.586
+      energy: 1.442
     - name: idle
       arguments: null
       energy: 0.024
@@ -75,17 +75,17 @@ ERT:
     actions:
     - name: access
       arguments: null
-      energy: 0.009
+      energy: 0.0
   - name: system.simple_ws.PE[0..255].input_activation_reg
     actions:
     - name: access
       arguments: null
-      energy: 0.009
+      energy: 0.0
   - name: system.simple_ws.PE[0..255].output_activation_reg
     actions:
     - name: access
       arguments: null
-      energy: 0.009
+      energy: 0.0
   - name: system.simple_ws.shared_glb
     actions:
     - name: write
