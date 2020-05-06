@@ -22,19 +22,22 @@ architecture_constraints:
 
   - target: shared_glb
     type: temporal
-    permutation: WVUYXJSHTCN
+    permutation: WVU YXJSHTCN
   - target: psum_spad
     type: temporal
     factors: W=0
-    permutation: WVUYXJSHTCN
+    split: 3
+    permutation: WVU YXJSHTCN
   - target: weights_spad
     type: temporal
     factors: U=0
-    permutation: WVUYXJSHTCN
+    split: 3
+    permutation: WVU YXJSHTCN
   - target: ifmap_spad
     type: temporal
     factors: V=0
-    permutation: WVUYXJSHTCN
+    split: 3
+    permutation: WVU YXJSHTCN
   - target: DummyBuffer
     type: temporal
     factors: N=1 C=1 T=1 H=1 S=1 J=1 X=1 Y=1 U=1 V=1 W=1
