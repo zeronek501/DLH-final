@@ -8,6 +8,7 @@ mapspace_constraints:
     - target: DRAM
       type: temporal
       permutation: HTCN
+      factors: T=0 H=4
     - target: shared_glb
       type: temporal
       permutation: JS

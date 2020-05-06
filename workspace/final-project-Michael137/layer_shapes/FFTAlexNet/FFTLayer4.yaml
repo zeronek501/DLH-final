@@ -26,20 +26,36 @@
 #                         a[n][c][h][j] = in0 + tmp            // 1 complex add
 #                         a[n][c][h][j + W/2] = in0 - tmp      // 1 complex subtract
 
+# Batch size/filter count
+# In Channel
+# max(nearestPowersOf2(28 + 3 - 1))
+# log(W)
+# W / 2
+# Real/Imaginary
+# Once for each row; then for each column
+                                          
+ # Switch between output 0 and 1
+ # Switch between input 0 and 1
+                                          
+# W / 2
+
 problem:
   instance:
     N: 1
-    C: 3
+    C: 384
     T: 2
-    H: 256
+    H: 16
     S: 5
-    J: 128
+    J: 8
     X: 2
     Y: 2
-    K: 2
+
+    U: 2 # Complex twiddles
+    V: 2 # Complex input
+    W: 2 # Complex output
 
     L: 2
-    O: 16
+    O: 8 # same as J
   shape:
     coefficients:
     - default: 1
@@ -50,6 +66,7 @@ problem:
     - name: Twiddles
       projection:
       - - - J
+      - - - U
     - name: Inputs
       projection:
       - - - N
@@ -58,7 +75,7 @@ problem:
       - - - J
           - L
         - - Y
-      - - - K
+      - - - V
     - name: Outputs
       projection:
       - - - N
@@ -67,7 +84,7 @@ problem:
       - - - J
         - - X
           - O
-      - - - K
+      - - - W
       read-write: true
     dimensions:
     - N
@@ -78,5 +95,7 @@ problem:
     - J
     - X
     - Y
-    - K
+    - U
+    - V
+    - W
     name: CNN-Layer

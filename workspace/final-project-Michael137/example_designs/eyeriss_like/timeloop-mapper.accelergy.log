@@ -8,8 +8,10 @@
 Info: Parsing file arch/eyeriss_like.yaml for architecture info 
 Info: Parsing file arch/components/smartbuffer_RF.yaml for compound_components info 
 Info: Parsing file arch/components/smartbuffer_SRAM.yaml for compound_components info 
+Warn: Cannot recognize the top key "architecture_constraints" in file constraints/eyeriss_like_arch_constraints.yaml 
+Warn: Cannot recognize the top key "mapspace_constraints" in file constraints/eyeriss_like_map_constraints.yaml 
 Warn: Cannot recognize the top key "mapper" in file mapper/mapper.yaml 
-Warn: Cannot recognize the top key "problem" in file ../../layer_shapes/AlexNet/AlexNet_layer1.yaml 
+Warn: Cannot recognize the top key "problem" in file ../../layer_shapes/AlexNet/AlexNet_layer4.yaml 
 Info: config file located: /root/.config/accelergy/accelergy_config.yaml 
 config file content: 
  {'estimator_plug_ins': ['/home/workspace/final-project-Michael137/estimation_plug_ins'], 'primitive_components': ['/home/workspace/final-project-Michael137/primitive_component_libs'], 'table_plug_ins': {'roots': ['/home/workspace/final-project-Michael137/set_of_table_templates/', '/home/workspace/final-project-Michael137/PIM_estimation_tables/', 'set_of_table_templates']}, 'version': 0.3}

@@ -1,10 +1,5 @@
-#
-# The following constraints are limitations of the hardware architecture and dataflow
-#
-
 architecture_constraints:
   targets:
-  # certain buffer only stores certain datatypes
   - target: psum_spad
     type: bypass
     bypass: [Inputs, Twiddles]
@@ -22,26 +17,27 @@ architecture_constraints:
     bypass: [Inputs, Outputs, Twiddles]
   - target: shared_glb
     type: bypass
-    bypass: [Twiddles]
-    keep: [Inputs, Outputs]
-  - target: DummyBuffer
-    type: spatial
-    permutation: KJSHTCN
-  # only allow fanout of M, Q out from glb
+    bypass: [Outputs]
+    keep: [Inputs, Twiddles]
+
   - target: shared_glb
-    type: spatial
-    permutation: KJSHTCN
-  # one ofmap position but of different output channels
+    type: temporal
+    permutation: WVUYXJSHTCN
   - target: psum_spad
     type: temporal
-    permutation: KJSHTCN
-  # row stationary -> 1 row at a time
+    factors: W=0
+    permutation: WVUYXJSHTCN
   - target: weights_spad
     type: temporal
-    permutation: KJSHTCN
+    factors: U=0
+    permutation: WVUYXJSHTCN
   - target: ifmap_spad
     type: temporal
-    permutation: KJSHTCN
-  # enforce the hardware limit of the bypassing everything
+    factors: V=0
+    permutation: WVUYXJSHTCN
   - target: DummyBuffer
     type: temporal
+    factors: N=1 C=1 T=1 H=1 S=1 J=1 X=1 Y=1 U=1 V=1 W=1
+  - target: DummyBuffer
+    type: spatial
+    permutation: WVUYXJSHTCN
