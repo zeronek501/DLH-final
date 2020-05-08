@@ -1,0 +1,61 @@
+problem:
+  instance:
+    N: 1
+    C: 384
+    T: 2
+    H: 16
+    S: 4
+    J: 8
+    U: 2
+    V: 2
+
+    X: 2 # Complex twiddles
+    Y: 2 # Complex input
+    Z: 2 # Complex output
+
+    L: 2
+    O: 8 # same as J
+  shape:
+    coefficients:
+    - default: 1
+      name: L
+    - default: 1
+      name: O
+    data-spaces:
+    - name: Twiddles
+      projection:
+      - - - J
+      - - - Z
+    - name: Inputs
+      projection:
+      - - - N
+      - - - C
+      - - - H
+      - - - J
+          - L
+        - - V
+      - - - Y
+    - name: Outputs
+      projection:
+      - - - N
+      - - - C
+      - - - H
+      - - - J
+        - - U
+          - O
+      - - - Z
+      read-write: true
+    dimensions:
+    - N
+    - C
+    - T
+    - H
+    - S
+    - J
+    - U
+    - V
+    - X
+    - Y
+    - Z
+    name: CNN-Layer
+

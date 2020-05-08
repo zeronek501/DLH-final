@@ -1,0 +1,51 @@
+#
+# The following constraints are limitations of the hardware architecture and dataflow
+#
+
+architecture_constraints:
+  targets:
+          #    - target: weight_reg
+          #      type: bypass
+          #      bypass: [Inputs, Outputs, Twiddles]
+          #      keep: []
+          #    - target: input_activation_reg
+          #      type: bypass
+          #      bypass: [Twiddles,Outputs]
+          #      keep: [Inputs]
+          #    - target: output_activation_reg
+          #      type: bypass
+          #      bypass: [Twiddles,Inputs]
+          #      keep: [Outputs]
+          #
+          #    - target: shared_glb
+          #      type: bypass
+          #      bypass: []
+          #      keep: [Inputs,Twiddles,Outputs]
+          #    - target: pe_spad
+          #      type: bypass
+          #      bypass: []
+          #      keep: [Inputs,Twiddles,Outputs]
+
+    - target: shared_glb
+      type: temporal
+      permutation: ZYXVUJSHTCN
+      factors: T=0 Z=1 Y=1 X=1
+
+    - target: shared_glb
+      type: spatial
+      permutation: ZYXVUJSHTCN
+      factors: Z=1 Y=1 X=1 H=0
+    - target: pe_spad
+      type: temporal
+      permutation: ZYXVUJSHTCN
+      factors: Z=1 Y=1 X=1
+
+    - target: weight_reg
+      type: temporal
+      permutation: ZYXVUJSHTCN
+    - target: input_activation_reg
+      type: temporal
+      permutation: ZYXVUJSHTCN
+    - target: output_activation_reg
+      type: temporal
+      permutation: ZYXVUJSHTCN

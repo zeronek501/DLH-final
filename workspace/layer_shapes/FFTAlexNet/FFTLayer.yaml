@@ -1,0 +1,81 @@
+# 2D FFT layer
+# assume: ignore cost of transpose
+# assume: twiddle is pre-computed and stored on a ROM.
+# input: [N][C][H][W] complex integer 16-bit type
+# twiddle: [W/2] or [H/2]
+# output: [N][C][H][W] complex integer 16-bit type
+# 
+# //Batch
+# for (n=0;n<N;n++)
+#     //Channel
+#     for (c=0;c<C;c++)
+#         // Horizontal + Transpose->Horizontal
+#         for (t=0;t<2;t++)
+#             //Horizontal indexing
+#             for(h=0;h<H;h++)
+#                 //1D-FFT, assume W=H, S = log_2(W)
+#                 for(s=1;s<=S;s++)
+#                     //Buttefly, J=W/2
+#                     for(j=0;j<J;j++)
+#                         // Our FFT primitive
+#                         m = (j >> (W-s)) << (W-s)   // 2 shift ops
+#                         w = twd[m]                  // 1 ROM read 
+#                         in0 = a[n][c][h][2*j]                // 1 AG and 1 SRAM read
+#                         in1 = a[n][c][h][2*j+1]              // 1 AG and 1 SRAM read
+#                         tmp = in1*2                 // 1 complex mult op
+#                         a[n][c][h][j] = in0 + tmp            // 1 complex add
+#                         a[n][c][h][j + W/2] = in0 - tmp      // 1 complex subtract
+
+problem:
+  instance:
+    N: 1  # Batch size/filter count
+    C: 3  # In Channel
+    H: 32 # max(nearestPowersOf2(28 + 3 - 1))
+    S: 5  # log(W)
+    J: 16 # W / 2
+    K: 2  # Real/Imaginary
+    T: 2  # Once for each row; then for each column
+
+    X: 2   # Switch between output 0 and 1
+    Y: 2   # Switch between input 0 and 1
+    L: 2
+    O: 16 # W / 2
+
+  shape:
+    coefficients:
+    - default: 1
+      name: L
+    - default: 1
+      name: O
+    data-spaces:
+    - name: Twiddles
+      projection:
+      - - - J
+    - name: Inputs
+      projection:
+      - - - N
+      - - - C
+      - - - H
+      - - - J
+          - L
+        - - Y
+      - - - K
+    - name: Outputs
+      projection:
+      - - - N
+      - - - C
+      - - - H
+      - - - J
+        - - X
+          - O
+      - - - K
+      read-write: true
+    dimensions:
+    - N
+    - C
+    - T
+    - H
+    - S
+    - J
+    - K
+    name: CNN-Layer

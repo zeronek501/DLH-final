@@ -1,0 +1,37 @@
+#
+# The following constraints are not limitations of the hardware architecture and dataflow,
+# but help limit the search space to speed up search
+#
+
+mapspace_constraints:
+  targets:
+    - target: shared_glb
+      type: spatial
+      permutation: WVUYXJSHTCN
+      factors: C=32
+    - target: pe_spad
+      type: temporal
+      permutation: WVUYXJSHTCN
+      factors: H=4
+    - target: input_spad
+      type: temporal
+      permutation: WVUYXJSHTCN
+    - target: output_spad
+      type: temporal
+      permutation: WVUYXJSHTCN
+    - target: weight_spad
+      type: temporal
+      permutation: WVUYXJSHTCN
+
+    - target: weight_reg
+      type: temporal
+      permutation: WVUYXJS
+      factors: U=0
+    - target: input_activation_reg
+      type: temporal
+      permutation: WVUYXJS
+      factors: V=0
+    - target: output_activation_reg
+      type: temporal
+      permutation: WVUYXJS
+      factors: W=0
