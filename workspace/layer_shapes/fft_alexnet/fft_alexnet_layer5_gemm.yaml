@@ -1,0 +1,46 @@
+problem:
+  instance:
+    C: 384
+    H: 16
+    J: 8
+    M: 256
+    N: 1
+    O: 8
+    S: 4.0
+    W: 16
+    X: 2
+    Y: 2
+    Z: 2
+  shape:
+    data-spaces:
+    - name: Inputs
+      projection:
+      - - - W
+      - - - H
+      - - - N
+      - - - C
+      - - - X
+    - name: Weights
+      projection:
+      - - - W
+      - - - H
+      - - - M
+      - - - C
+      - - - Y
+    - name: Outputs
+      projection:
+      - - - W
+      - - - H
+      - - - N
+      - - - M
+      - - - Z
+      read-write: true
+    dimensions:
+    - W
+    - H
+    - N
+    - C
+    - M
+    - X
+    - Y
+    - Z

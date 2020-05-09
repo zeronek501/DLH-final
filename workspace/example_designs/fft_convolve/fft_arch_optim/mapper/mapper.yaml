@@ -1,7 +1,8 @@
 mapper:
   optimization-metrics: [ delay, energy ]
-  live-status: True
-  num-threads: 11
+  #live-status: True
+  live-status: False
+  num-threads: 8
   timeout: 8000
   victory-condition: 3000
   algorithm: random-pruned

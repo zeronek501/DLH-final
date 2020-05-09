@@ -54,7 +54,7 @@ architecture:
               - name: input_activation_reg
                 class: reg_storage
                 attributes:
-                  depth: 4
+                  depth: 1
                   width: 16           # width in bits
                   meshX: 16
               - name: output_activation_reg
