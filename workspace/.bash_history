@@ -3,3 +3,12 @@ vi
 ls
 pwd
 exit
+exit
+ls
+exitaccelergy
+accelergy
+ls
+exi
+exit
+exit
+exit

@@ -4,48 +4,47 @@
 
 architecture_constraints:
   targets:
-          #    - target: weight_reg
-          #      type: bypass
-          #      bypass: [Inputs, Outputs, Twiddles]
-          #      keep: []
-          #    - target: input_activation_reg
-          #      type: bypass
-          #      bypass: [Twiddles,Outputs]
-          #      keep: [Inputs]
-          #    - target: output_activation_reg
-          #      type: bypass
-          #      bypass: [Twiddles,Inputs]
-          #      keep: [Outputs]
-          #
-          #    - target: shared_glb
-          #      type: bypass
-          #      bypass: []
-          #      keep: [Inputs,Twiddles,Outputs]
-          #    - target: pe_spad
-          #      type: bypass
-          #      bypass: []
-          #      keep: [Inputs,Twiddles,Outputs]
+    - target: weight_reg
+      type: bypass
+      bypass: [Inputs, Outputs]
+      keep: [Twiddles]
+    - target: input_activation_reg
+      type: bypass
+      bypass: [Twiddles,Outputs]
+      keep: [Inputs]
+    - target: output_activation_reg
+      type: bypass
+      bypass: [Twiddles,Inputs]
+      keep: [Outputs]
+  
+    - target: shared_glb_right
+      type: bypass
+      bypass: [Twiddles,Outputs]
+      keep: [Inputs]
+    - target: shared_glb_left
+      type: bypass
+      bypass: [Twiddles,Inputs]
+      keep: [Outputs]
 
-    - target: shared_glb
+    - target: shared_glb_right
       type: temporal
-      permutation: ZYXVUJSHTCN
-      factors: T=0 Z=1 Y=1 X=1
+      permutation: VUJSHTCN
+      factors: T=0
 
-    - target: shared_glb
+    - target: shared_glb_right
       type: spatial
-      permutation: ZYXVUJSHTCN
-      factors: Z=1 Y=1 X=1 H=0
-    - target: pe_spad
-      type: temporal
-      permutation: ZYXVUJSHTCN
-      factors: Z=1 Y=1 X=1
+      permutation: VUJSH
+      factors: H=0 # U=0
 
     - target: weight_reg
       type: temporal
-      permutation: ZYXVUJSHTCN
+      permutation: VUJSH
+      factors: V=1 U=1 J=1 S=1 H=1
     - target: input_activation_reg
       type: temporal
-      permutation: ZYXVUJSHTCN
+      permutation: VUJSH
+      factors: V=1 U=1 J=1 S=1 H=1
     - target: output_activation_reg
       type: temporal
-      permutation: ZYXVUJSHTCN
+      permutation: VUJSH
+      factors: V=1 U=1 J=1 S=1 H=1

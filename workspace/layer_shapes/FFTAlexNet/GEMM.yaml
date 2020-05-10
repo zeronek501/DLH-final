@@ -5,9 +5,6 @@ problem:
     M: 256 # Output channels
     W: 32  # Weight width
     H: 32  # Weight Height
-    K: 2   # Real/Imaginary input
-    L: 2   # Real/Imaginary weights
-    J: 2   # Real/Imaginary ouputs
   shape:
     data-spaces:
     - name: Inputs
@@ -16,28 +13,22 @@ problem:
       - - - H
       - - - N
       - - - C
-      - - - K
     - name: Weights
       projection:
       - - - W
       - - - H
       - - - M
       - - - C
-      - - - L
     - name: Outputs
       projection:
       - - - W
       - - - H
       - - - N
       - - - M
-      - - - J
       read-write: true
     dimensions:
     - W
     - H
     - N
     - C
-    - K
     - M
-    - L
-    - J
