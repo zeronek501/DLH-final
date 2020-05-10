@@ -133,7 +133,7 @@ if __name__ == "__main__":
         else:
             run_timeloop_mapper(layer_path, ltype, output_dir)
             stats[layer] = parse_timeloop_stats(output_dir)
-    mpu.io.write(os.path.join(output_dir, layer) + ".pickle", stats)
+            mpu.io.write(os.path.join(output_dir, layer) + ".pickle", stats[layer])
 
     for layer,results in stats.items():
         print("=== " + layer + " results ===")
