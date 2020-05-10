@@ -16,6 +16,7 @@ python construct_fft_workloads conv_alexnet eyeriss_like
 	large memory requirements for gemm
 
 # Run Instructions
+edit config to point to local tables
 accelergyTables -r PIM_estimation_plugins
 python sweep.py fft_alexnet fft_convolve/fft_arch_optim
 	generates to output directory
