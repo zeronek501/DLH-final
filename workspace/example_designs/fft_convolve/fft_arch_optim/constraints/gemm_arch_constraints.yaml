@@ -1,0 +1,46 @@
+#
+# The following constraints are limitations of the hardware architecture and dataflow
+#
+
+architecture_constraints:
+  targets:
+  - target: input_activation_reg
+    type: bypass
+    bypass: [Weights,Outputs]
+    keep: [Inputs]
+  - target: output_activation_reg
+    type: bypass
+    bypass: [Weights,Inputs]
+    keep: [Outputs]
+
+  - target: shared_glb_left
+    type: bypass
+    keep: [Weights]
+    bypass: [Inputs,Outputs]
+  - target: shared_glb_right
+    type: bypass
+    keep: [Outputs]
+    bypass: [Weights,Inputs]
+
+  - target: shared_glb_right
+    type: spatial
+    permutation: MCN
+    factors: N=0 C=4
+  - target: shared_glb_left
+    type: temporal
+    permutation: WHM
+    factors: W=0 H=0
+  - target: shared_glb_right
+    type: temporal
+    permutation: MCN
+    factors: M=16
+
+  - target: weight_reg
+    type: temporal
+    factors: W=1 H=1 N=1 C=1 M=1
+  - target: input_activation_reg
+    type: temporal
+    factors: W=1 H=1 N=1 C=1 M=1
+  - target: output_activation_reg
+    type: temporal
+    factors: W=1 H=1 N=1 C=1 M=1

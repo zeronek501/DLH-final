@@ -44,16 +44,8 @@ architecture:
                   read_bandwidth: 16
                   write_bandwidth: 16
             subtree:
-            - name: PE[0..255]
+            - name: PE[0..127]
               local:
-                      #                - name: pe_spad
-                      #                  class: smartbuffer_SRAM
-                      #                  attributes:
-                      #                    memory_depth: 192
-                      #                    memory_width: 64
-                      #                    block-size: 1
-                      #                    word-bits: 16
-                      #                    meshX: 16
                 - name: mac
                   class: intmac
                   #class: fft_mac

@@ -26,15 +26,20 @@ architecture_constraints:
       bypass: [Twiddles,Inputs]
       keep: [Outputs]
 
+    - target: shared_glb_left
+      type: temporal
+      permutation: VUJSHTCN
+      factors: V=1 U=1 J=1 S=1 H=1 T=1 C=1 N=1
+
     - target: shared_glb_right
       type: temporal
       permutation: VUJSHTCN
-      factors: T=0
+      factors: T=0 H=0 # J=0
 
     - target: shared_glb_right
       type: spatial
       permutation: VUJSH
-      factors: H=0 # U=0
+      factors: V=0 U=0
 
     - target: weight_reg
       type: temporal
