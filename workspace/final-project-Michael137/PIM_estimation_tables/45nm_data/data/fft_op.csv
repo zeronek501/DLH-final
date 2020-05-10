@@ -1,5 +1,0 @@
-technology,latency(ns),datawidth,action,energy,area,comment
-45nm,0.5,16,fft_random,0,0,energy in pJ;  area in um^2
-45nm,0.5,16,fft_reused,0,0,energy in pJ;  area in um^2
-45nm,0.5,16,fft_gated,0,0,energy in pJ;  area in um^2
-45nm,0.5,16,idle,0,0,
