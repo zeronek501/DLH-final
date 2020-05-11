@@ -6,7 +6,7 @@ We use an [architecture based on Eyeriss](workspace/example_designs/eyeriss_like
 
 # Infrastructure changes
 ## Modified MAC
-Our primitive operation in FFT-Convolution is more than a single integer MAC. We model it as 3 integer multiplications and 2 integer, i.e., similar to a complex multiplication. We model this by scaling the energy and latency requirements of an intmac in our MAC unit appropriately. The logic is found in [aladdin_table.py](workspace/estimation_plug_ins/accelergy-aladdin-plug-in/aladdin_table.py) which reads our new energy estimation data for [multiplication](workspace/estimation_plug_ins/accelergy-aladdin-plug-in/data/fft_mult.csv) and [multiplication](workspace/estimation_plug_ins/accelergy-aladdin-plug-in/data/fft_add.csv).
+Our primitive operation in FFT-Convolution is more than a single integer MAC. We model it as 3 integer multiplications and 2 integer additions, i.e., similar to a complex multiplication. We model this by scaling the energy and latency requirements of an intmac in our MAC unit appropriately. The logic is found in [aladdin_table.py](workspace/estimation_plug_ins/accelergy-aladdin-plug-in/aladdin_table.py) which reads our new energy estimation data for [multiplication](workspace/estimation_plug_ins/accelergy-aladdin-plug-in/data/fft_mult.csv) and [addition](workspace/estimation_plug_ins/accelergy-aladdin-plug-in/data/fft_add.csv).
 
 ## Workload Generation
 We wrote a [script to generate FFT, GEMM and convolution workloads](workspace/scripts/construct_fft_workloads) for AlexNet and sweep simulations for Eyeriss and a custom architecture.
