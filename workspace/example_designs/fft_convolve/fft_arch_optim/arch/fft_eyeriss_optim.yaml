@@ -21,13 +21,13 @@ architecture:
             - name: shared_glb_left
               class: smartbuffer_SRAM
               attributes:
-                memory_depth: 16384
-                memory_width: 128
-                n_banks: 32
-                block-size: 4
+                memory_depth: 12288
+                memory_width: 32
+                n_banks: 64
+                block-size: 2
                 word-bits: 16
-                read_bandwidth: 16
-                write_bandwidth: 16
+                read_bandwidth: 32
+                write_bandwidth: 32
           subtree:
           - name: sram2
             attributes:
@@ -36,15 +36,15 @@ architecture:
               - name: shared_glb_right
                 class: smartbuffer_SRAM
                 attributes:
-                  memory_depth: 16384
-                  memory_width: 128
-                  n_banks: 32
-                  block-size: 4
+                  memory_depth: 12288
+                  memory_width: 32
+                  n_banks: 64
+                  block-size: 2
                   word-bits: 16
-                  read_bandwidth: 16
-                  write_bandwidth: 16
+                  read_bandwidth: 32
+                  write_bandwidth: 32
             subtree:
-            - name: PE[0..127]
+            - name: PE[0..31]
               local:
                 - name: mac
                   class: intmac

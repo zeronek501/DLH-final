@@ -20,7 +20,7 @@ COMPONENTS_PATH = os.path.join(DESIGN_PATH, 'arch', 'components', '*')
 ARCH_PATH = {}
 ARCH_PATH['conv'] = os.path.join(DESIGN_PATH, 'arch', 'eyeriss_like.yaml')
 ARCH_PATH['fft'] = os.path.join(DESIGN_PATH, 'arch', 'fft_eyeriss_optim.yaml')
-ARCH_PATH['gemm'] = os.path.join(DESIGN_PATH, 'arch', 'gemm_eyeriss.yaml')
+ARCH_PATH['gemm'] = os.path.join(DESIGN_PATH, 'arch', 'fft_eyeriss_optim.yaml')
 
 ARCH_CONSTRAINTS_PATH = {}
 ARCH_CONSTRAINTS_PATH['conv'] = os.path.join(DESIGN_PATH, 'constraints', 'conv_arch_constraints.yaml')

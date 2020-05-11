@@ -50,10 +50,6 @@ problem:
     U: 2
     V: 2
 
-    X: 2 # Complex twiddles
-    Y: 2 # Complex input
-    Z: 2 # Complex output
-
     L: 2
     O: 8 # same as J
   shape:
@@ -66,7 +62,6 @@ problem:
     - name: Twiddles
       projection:
       - - - J
-      - - - X
     - name: Inputs
       projection:
       - - - N
@@ -75,7 +70,6 @@ problem:
       - - - J
           - L
         - - V
-      - - - Y
     - name: Outputs
       projection:
       - - - N
@@ -84,7 +78,6 @@ problem:
       - - - J
         - - U
           - O
-      - - - Z
       read-write: true
     dimensions:
     - N
@@ -95,7 +88,4 @@ problem:
     - J
     - U
     - V
-    - X
-    - Y
-    - Z
     name: CNN-Layer

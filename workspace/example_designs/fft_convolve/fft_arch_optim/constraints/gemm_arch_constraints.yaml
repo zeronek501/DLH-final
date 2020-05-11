@@ -25,15 +25,15 @@ architecture_constraints:
   - target: shared_glb_right
     type: spatial
     permutation: MCN
-    factors: N=0 C=4
+    factors: N=0 C=4 M=4
   - target: shared_glb_left
     type: temporal
     permutation: WHM
-    factors: W=0 H=0
+    #factors: W=0 H=0
   - target: shared_glb_right
     type: temporal
     permutation: MCN
-    factors: M=16
+    #factors: M=16
 
   - target: weight_reg
     type: temporal

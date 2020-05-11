@@ -72,6 +72,9 @@ def rewrite_fft_bounds(src, dst, workload_bounds, forward=True):
     jj = padded_h // 2
     oo = jj
 
+    if not forward:
+        cc = n
+
     #constants
     #tt, uu, vv, xx, yy, zz, ll = 2
 
@@ -101,12 +104,11 @@ def rewrite_gemm_bounds(src, dst, workload_bounds, forward=True):
 
 def rewrite_workload_bounds(src, dst, workload_bounds):
     w, h, c, n, m, s, r, wpad, hpad, wstride, hstride = workload_bounds
-    if wstride !=1 or hstride != 1:
-        rewrite_convolve_bounds(src[:-5] + "_conv.yaml", dst[:-5] + "_conv.yaml", workload_bounds)
-    else:
-        rewrite_fft_bounds(src[:-5] + "_fft.yaml", dst[:-5] + "_fft.yaml", workload_bounds, forward=True)
-        rewrite_gemm_bounds(src[:-5] + "_gemm.yaml", dst[:-5] + "_gemm.yaml", workload_bounds)
-        rewrite_fft_bounds(src[:-5] + "_fft.yaml", dst[:-5] + "_ifft.yaml", workload_bounds, forward=False)
+    if wstride != 1:
+        return
+    rewrite_fft_bounds(src[:-5] + "_fft.yaml", dst[:-5] + "_fft.yaml", workload_bounds, forward=True)
+    rewrite_gemm_bounds(src[:-5] + "_gemm.yaml", dst[:-5] + "_gemm.yaml", workload_bounds)
+    rewrite_fft_bounds(src[:-5] + "_fft.yaml", dst[:-5] + "_ifft.yaml", workload_bounds, forward=False)
 
 def create_folder(directory):
     try:
