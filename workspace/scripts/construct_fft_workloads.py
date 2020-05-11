@@ -73,7 +73,7 @@ def rewrite_fft_bounds(src, dst, workload_bounds, forward=True):
     oo = jj
 
     if not forward:
-        cc = n
+        cc = m
 
     #constants
     #tt, uu, vv, xx, yy, zz, ll = 2
